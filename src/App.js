@@ -1,10 +1,28 @@
-import { Button } from './components'
+import { createGlobalStyle } from 'styled-components'
+import { normalize } from 'styled-normalize'
+
+import { Button, ProviderCheckboxGroup } from './components'
+
+const GlobalStyle = createGlobalStyle`
+  ${normalize}
+
+  * {
+    box-sizing: border-box;
+    
+    &::before,
+    &::after {
+      box-sizing: border-box;
+    }
+  }
+`
 
 function App() {
   return (
-    <div className="App">
+    <main>
+      <GlobalStyle />
+      <ProviderCheckboxGroup />
       <Button>Start</Button>
-    </div>
+    </main>
   );
 }
 
