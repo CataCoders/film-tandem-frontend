@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { IconCheck } from './IconCheck'
+import IconCheck from './IconCheck'
 
 const Wrapper = styled.label`
   position: relative;
@@ -12,6 +12,7 @@ const Wrapper = styled.label`
   overflow: hidden;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   transition: background 300ms;
 
@@ -56,7 +57,7 @@ const CheckOverlay = styled.div`
   }
 `
 
-export function ImageCheckbox ({
+export default function ImageCheckbox ({
   checked,
   imageUrl,
   imageAltText,

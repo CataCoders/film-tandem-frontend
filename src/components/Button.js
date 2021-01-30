@@ -8,6 +8,7 @@ const Wrapper = styled.button`
   outline: none;
   padding: 1em 2em;
   width: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   transition: background 300ms;
 
@@ -24,10 +25,12 @@ const Text = styled.span`
   text-transform: uppercase;
 `
 
-export function Button ({ children, onClick }) {
+function Button ({ className, children, onClick }) {
   return (
-    <Wrapper onClick={onClick}>
+    <Wrapper className={className} onClick={onClick}>
       <Text>{children}</Text>
     </Wrapper>
   )
 }
+
+export default styled(Button)``

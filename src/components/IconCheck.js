@@ -1,6 +1,6 @@
 import * as React from "react"
 
-export function IconCheck (props) {
+export default function IconCheck (props) {
   return (
     <svg
       width={70}
