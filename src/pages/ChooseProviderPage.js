@@ -15,8 +15,12 @@ const Wrapper = styled.main`
   background: #292f36;
   padding: 1rem;
 
+  ${ProviderCheckboxGroup} {
+    align-self: stretch;
+  }
+
   ${Button} {
-    align-self: center;
+    align-self: end;
   }
 `
 

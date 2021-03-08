@@ -2,11 +2,15 @@ import styled from 'styled-components'
 
 import ImageCheckbox from './ImageCheckbox'
 
+const Wrapper = styled.div`
+  overflow-y: scroll;
+  min-width: 0;
+`
+
 const Grid = styled.div`
   display: grid;
   grid-template-columns: min-content min-content;
   grid-gap: 2rem;
-  min-width: 0;
 `
 
 const Title = styled.h2`
@@ -18,9 +22,9 @@ const Title = styled.h2`
   margin-bottom: 2rem;
 `
 
-export default function ProviderCheckboxGroup() {
+function ProviderCheckboxGroup({ className }) {
   return (
-    <div>
+    <Wrapper className={className}>
       <Title>
         Pick your providers:
       </Title>
@@ -42,6 +46,8 @@ export default function ProviderCheckboxGroup() {
           imageAlt='Amazon Prime Video'
         />
       </Grid>
-    </div>
+    </Wrapper>
   )
 }
+
+export default styled(ProviderCheckboxGroup)``
